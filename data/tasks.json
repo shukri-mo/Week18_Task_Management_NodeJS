@@ -7,6 +7,17 @@
     "priority": "high",
     "dueDate": "2024-01-15",
     "assignedTo": "John Doe",
+    
+  "createdBy": {
+    "id": "1",
+    "name": "John Doe",
+    "email": "john@example.com"
+  },
+  "assignedBy": {
+    "id": "1",
+    "name": "Jane Smith",
+    "email": "jane@example.com"
+  },
     "subtasks": [
       {
         "id": "1.1",
@@ -36,6 +47,7 @@
     "createdAt": "2024-01-01T10:30:00.000Z",
     "updatedAt": "2025-07-23T01:29:37.667Z"
   },
+  
   {
     "id": "2",
     "title": "Build REST API",
@@ -44,6 +56,16 @@
     "priority": "medium",
     "dueDate": "2024-01-20",
     "assignedTo": "Jane Smith",
+     "createdBy": {
+    "id": "2",
+    "name": "John Doe",
+    "email": "john@example.com"
+  },
+  "assignedBy": {
+    "id": "2",
+    "name": "Caasha Faarax",
+    "email": "caasha@example.com"
+  },
     "subtasks": [
       {
         "id": "2.1",
@@ -69,6 +91,7 @@
         "completed": false,
         "description": "Implement input validation and error handling"
       }
+      
     ],
     "createdAt": "2024-01-02T11:00:00.000Z",
     "updatedAt": "2024-01-02T11:00:00.000Z"
@@ -81,6 +104,16 @@
     "priority": "low",
     "dueDate": "2024-01-10",
     "assignedTo": "Mike Johnson",
+     "createdBy": {
+    "id": "3",
+    "name": "Faadumo Ali",
+    "email": "faadumo@example.com"
+  },
+  "assignedBy": {
+    "id": "3",
+    "name": "Geele Farax",
+    "email": "geele@example.com"
+  },
     "subtasks": [
       {
         "id": "3.1",
@@ -118,6 +151,16 @@
     "priority": "low",
     "dueDate": "2024-01-25",
     "assignedTo": "Alice Johnson",
+     "createdBy": {
+    "id": "4",
+    "name": "Cali faarax",
+    "email": "cali@example.com"
+  },
+  "assignedBy": {
+    "id": "4",
+    "name": "Jane Smith",
+    "email": "jane@example.com"
+  },
     "subtasks": [
       {
         "id": "4.1",
