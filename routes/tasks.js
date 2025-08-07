@@ -52,6 +52,8 @@ function validateTaskData(taskData) {
     "description",
     "status",
     "priority",
+    "createdBy",
+    "assignedBy",
   ];
   const validStatuses = [
     "pending",
@@ -109,6 +111,20 @@ router.get("/tasks", async (req, res) => {
 
     // Add query parameter support for filtering
     let filteredTasks = tasks;
+    //Filter by created By
+    if (req.query.createdBy) {
+      filteredTasks = filteredTasks.filter((task) => {
+        task.createdBy === req.query.createdBy;
+      });
+    }
+    //filter by assignedBy
+    if (req.query.assignedBy) {
+      filteredTasks = filteredTasks.filter(
+        (task) => task.assignedBy === req.query.assignedBy
+      );
+    }
+    console.log("All tasks:", tasks);
+console.log("Query assignedBy:", req.query.assignedBy);
 
     // Filter by status if provided
     if (req.query.status) {
@@ -182,8 +198,14 @@ router.post("/tasks", async (req, res) => {
     // TODO: Implement task creation
     // 1. Extract data from req.body (title`, description, status, priority, etc.)
 
-    const { title, description, status, priority } =
-      req.body;
+    const {
+      title,
+      description,
+      status,
+      priority,
+      createdBy,
+      assignedBy,
+    } = req.body;
     // 2. Validate the data using validateTaskData function
     const validation = validateTaskData(req.body);
     if (!validation.isValid) {
@@ -204,6 +226,8 @@ router.post("/tasks", async (req, res) => {
       description,
       status,
       priority,
+      createdBy,
+      assignedBy,
     };
     // 6. Add the task to the tasks array
     tasks.push(newTask);
